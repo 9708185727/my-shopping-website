@@ -1,17 +1,37 @@
 import React from "react";
 import laptop from "../../assets/images/asus.png";
+import Modal from "./Modal";
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import {  FaPencil, FaTrash } from "react-icons/fa6";
-import { deleteProduct } from "../../api/products";
+import { FaPencil, FaTrash } from "react-icons/fa6";
+import { deleteProduct, getProducts } from "../../api/products";
 
 const ProductsCard = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
   const { id, name, brand, category, price, url } = props;
+
   async function removeProduct() {
-    await deleteProduct(id)
+    setIsOpen(true)
+    
     
   }
-
+  async function confirmDelete() {
+   
+    try {
+      
+      await deleteProduct(id);
+      await getProducts();
+    } catch (error) {
+      toast(error.response.data, {
+        type: "error",
+        outoClose: false,
+      });
+    }
+    finally{
+      setIsOpen(false)
+    }
+  }
   return (
     <>
       <div
@@ -36,18 +56,32 @@ const ProductsCard = (props) => {
               Buy Now
             </button>
           </Link>
-          
-            <div className="flex space-x-2">
-            <Link to={`edit/${id}`} className="px-2 py-1 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white">
-              <FaPencil className="mt-1"/>
+
+          <div className="flex space-x-2">
+            <Link
+              to={`edit/${id}`}
+              className="px-2 py-1 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white"
+            >
+              <FaPencil className="mt-1" />
             </Link>
-          
-          <button onClick={removeProduct} className="px-2 py-1 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white">
+
+            <button
+              onClick={removeProduct}
+              className="px-2 py-1 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white"
+            >
               <FaTrash />
             </button>
-            </div>
+          </div>
         </div>
-      </div>
+        </div>
+        <Modal
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          label="Delete Product"
+          body={<p>Are you sure you want to delete this product?</p>}
+          actions={<button className="bg-red-500 text-white" onClick={confirmDelete}>Confirm</button>}
+        />
+    
     </>
   );
 };

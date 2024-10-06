@@ -19,6 +19,7 @@ function dis(){
 }
   return (
     <>
+    
 {count}
       <div className="bg-yellow-700"> This is Home page</div>
       <button onClick={inc} className="px-2 py-1 bg-blue-700">INC</button>
