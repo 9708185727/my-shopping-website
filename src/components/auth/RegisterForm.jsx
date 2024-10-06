@@ -120,9 +120,22 @@ const RegisterForm = () => {
                   },
               })}
               placeholder="Enter Password"
+              
               className="p-1 pr-9 pl-8 border-black text-black min-w-full rounded-full border border-2xl "
             />
             <p className="text-red-500 ms-2">{errors.password?.message}</p>
+            <div className="mt-5 text-center">
+            <div className="mt-5 max-w-full">
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                className="text-black"
+                name="myCheckbox"
+              />
+              <p className="text-black inline ml-2 ">I Agree with <span className='text-red-500'>privacy</span>and <span className='text-red-500'>policy</span></p>
+             
+            </div>
+          </div>
             <button
               type="button"
               onClick={() => setShowPassword(!showpassword)}
@@ -175,7 +188,7 @@ const RegisterForm = () => {
           </button>
 
           <div className="mt-8">
-            <h1 className="text-center text-black mt-5">Or Sign in with</h1>
+            <h1 className="text-center text-black mt-5">Or Sign Up with</h1>
             <div className="text-center mt-5 ">
               <FaFacebook className=" bg-white text-blue-600 inline" />
               <TiSocialTwitter className="ml-2 inline bg-white text-blue-600" />

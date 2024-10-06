@@ -96,8 +96,7 @@ const LoginForm = () => {
           <div className="mt-5 max-w-full relative">
             <RiLockPasswordLine className="absolute top-2 left-2 text-black" />
 
-            <input
-              type={showpassword ? "text" : "password"}
+            <input type={showpassword ? "text" : "password"}
               {...register("password", {
                 required: "Please enter valid passowrd",
                 minLength: {
@@ -105,9 +104,7 @@ const LoginForm = () => {
                   message: "password length must be greater than 8",
                 },
               })}
-              placeholder="Enter Password"
-              className="p-1 pr-9 pl-8 border-black text-black min-w-full rounded-full border border-2xl "
-            />
+              placeholder="Enter Password" className="p-1 pr-9 pl-8 border-black text-black min-w-full rounded-full border border-2xl "/>
             <p className="text-red-500 ms-2">{errors.password?.message}</p>
             <button
               type="button"

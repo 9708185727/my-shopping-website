@@ -2,9 +2,12 @@ import React, { useState ,useEffect} from "react";
 import { FaCartPlus, FaSpinner } from "react-icons/fa";
 import { GrStar } from "react-icons/gr";
 import laptop from "../../assets/images/asus.png";
-
+import { Link } from "react-router-dom";
+import { BiLeftArrowAlt } from "react-icons/bi";
+import { PRODUCTS_ROUTE } from "../../constants/routes";
 import { getProductId } from "../../api/products";
 import { useParams } from "react-router";
+import Spinner from "../../components/products/Spinner";
 const ProductDetails = () => {
   const params=useParams()
   const [loading, setLoading] = useState(true);
@@ -19,14 +22,21 @@ const ProductDetails = () => {
       .catch((error)=>{
         console.log(error.response.data)
       });
-  }, []);
-  if(loading) return (<div className="text-center w-full ms-96 mt-2"><FaSpinner/></div>)
+  }, [params.id]);
+  if(loading) return (<div className="text-center w-full  mt-2">  <Spinner/></div>)
   return (
 
     <>
      
           <section className="py-12 ps-8 pe-8" >
-            <div className="mt-4 mx-10 max-w-full h-1/2   flex-col md:flex-row flex flex-justify-between items-center justify-around ">
+
+          <Link to={PRODUCTS_ROUTE}>
+        <p className="ml-36 mt-16 shadow-md px-3 py-2   inline">
+          <BiLeftArrowAlt className="inline" /> Back
+        </p>
+      </Link>
+    
+            <div className="mt-4 mx-16 max-w-full h-1/2   flex-col md:flex-row flex flex-justify-between items-center justify-around ">
               <img src={product.url??laptop} alt="error" className=" block max-w-full max-h-[395px] " />
 
               <div className=" w-1/2 p-4 shadow-2xl ">
