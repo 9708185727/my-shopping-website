@@ -22,7 +22,7 @@ const ProductsForm = ({ product }) => {
       if (isEditing) {
         await editProduct(product._id, data);
       } else {
-        const response = await addProduct(data);
+        await addProduct(data);
       }
       toast(`Product ${isEditing ? "Updated" : "Added"} Successfully`, {
         type: "success",
@@ -110,7 +110,8 @@ const ProductsForm = ({ product }) => {
 
           <button
             type="submit"
-            className="bg-teal-700 rounded-full text-center mt-8 text-white p-1 min-w-full text-md font-medium"
+            disabled={loading}
+            className="bg-teal-700 rounded-full text-center mt-8 text-white p-1 min-w-full text-md font-medium disabled:opacity-75 disabled:cursor-not-allowed"
           >
             {isEditing ? "Edit Product" : "Add Product"}
             {loading ? <Spinner /> : null}

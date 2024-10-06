@@ -25,4 +25,12 @@ const editProduct = async (id,data) => {
   });
   return response;
 };
-export { getProducts, getProductId, addProduct ,editProduct};
+const deleteProduct = async (id) => {
+  const response = await axios.delete(`${config.baseApiUrl}/api/products/${id}`, {
+    headers: {
+      Authorization:`Bearer ${authToken}`,
+    }
+  });
+  return response;
+};
+export { getProducts, getProductId, addProduct ,editProduct,deleteProduct};

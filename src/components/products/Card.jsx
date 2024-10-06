@@ -2,10 +2,15 @@ import React from "react";
 import laptop from "../../assets/images/asus.png";
 
 import { Link } from "react-router-dom";
-import { FaPencil } from "react-icons/fa6";
+import {  FaPencil, FaTrash } from "react-icons/fa6";
+import { deleteProduct } from "../../api/products";
 
 const ProductsCard = (props) => {
   const { id, name, brand, category, price, url } = props;
+  async function removeProduct() {
+    await deleteProduct(id)
+    
+  }
 
   return (
     <>
@@ -27,15 +32,20 @@ const ProductsCard = (props) => {
         </p>
         <div className="flex justify-between">
           <Link to={id}>
-            <button className="p-1 pl-2 pr-2 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white">
+            <button className="px-2 py-1 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white">
               Buy Now
             </button>
           </Link>
-          <Link to={`edit/${id}`}>
-            <button className="p-1 pl-2 pr-2 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white">
-              <FaPencil />
+          
+            <div className="flex space-x-2">
+            <Link to={`edit/${id}`} className="px-2 py-1 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white">
+              <FaPencil className="mt-1"/>
+            </Link>
+          
+          <button onClick={removeProduct} className="px-2 py-1 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white">
+              <FaTrash />
             </button>
-          </Link>
+            </div>
         </div>
       </div>
     </>
