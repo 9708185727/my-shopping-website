@@ -40,7 +40,7 @@ const EditProduct = () => {
       </Link>
       <div className="text-center w-auto ">
      
-     <Title label="Edit Product" className=" text-white ml-36 inline me-1 mb-2"/>
+         <Title label="Edit Product" className="  ml-36 inline me-1 mb-2"/>
       {
         loading?<Spinner />:null
       }

@@ -31,7 +31,7 @@ const ProductDetails = () => {
           <section className="py-12 ps-8 pe-8" >
 
           <Link to={PRODUCTS_ROUTE}>
-        <p className="ml-36 mt-16 shadow-md px-3 py-2   inline">
+        <p className="ml-24 mt-16 shadow-md px-3 py-2   inline">
           <BiLeftArrowAlt className="inline" /> Back
         </p>
       </Link>

@@ -6,11 +6,17 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaPencil, FaTrash } from "react-icons/fa6";
 import { deleteProduct, getProducts } from "../../api/products";
+import { getAllProducts } from "../../redux/products/productActions";
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 const ProductsCard = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { id, name, brand, category, price, url } = props;
+  const dispatch=useDispatch();
 
+   
+ 
   async function removeProduct() {
     setIsOpen(true)
     
@@ -19,9 +25,14 @@ const ProductsCard = (props) => {
   async function confirmDelete() {
    
     try {
-      
       await deleteProduct(id);
-      await getProducts();
+      dispatch(getAllProducts())
+      toast(`product ${name} deleted successfully`,{
+        type:"success",
+        outoClose:1500
+      })
+     
+    
     } catch (error) {
       toast(error.response.data, {
         type: "error",

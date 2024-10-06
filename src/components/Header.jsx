@@ -5,6 +5,7 @@ import { FaShopify } from "react-icons/fa";
 import { HOME_ROUTE } from "../constants/routes";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../redux/auth/authSlice";
+import { BiLogOut } from "react-icons/bi";
 
 const Header = () => {
   const [isMobileMenuHidden, setMobileMenuHidden] = useState(true);
@@ -31,9 +32,9 @@ const Header = () => {
             <button
               type="button"
               onClick={logout}
-              className="text-white bg-teal-700 hover:bg-teal-900 focus:ring-4 focus:outline-none focus:ring-teal-700 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="text-teal-700  text-2xl focus:ring-4 focus:outline-none focus:ring-teal-700 font-medium rounded-lg  px-4 py-2 text-center "
             >
-            Logout
+            Logout<BiLogOut className="inline ml-2"/>
             </button>
             : null}
             <button

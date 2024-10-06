@@ -3,7 +3,7 @@ import ProductsForm from "../../components/products/Form";
 import { BiLeftArrowAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { PRODUCTS_ROUTE } from "../../constants/routes";
-import Spinner from "../../components/products/Spinner";
+
 import Title from "../../components/Title";
 
 const AddProduct = () => {
@@ -18,7 +18,7 @@ const AddProduct = () => {
         </p>
       </Link>
       <div className="text-center w-auto">
-        <Title label='Add Product' className="text-white ml-36"/>
+        <Title label='Add Product' className=" ml-36"/>
       
       <ProductsForm />
       </div>
