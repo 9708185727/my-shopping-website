@@ -2,17 +2,19 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Title from "../../components/Title";
 import ProductsCard from "../../components/products/Card";
-
 import ProductsLoader from "../../components/products/Loader.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllProducts } from "../../redux/products/productActions.js";
+import ProductsFilter from "../../components/products/Filter.jsx";
+import { getAllProducts, getProductCategories } from "../../redux/products/productActions.js";
 const ProductList = () => {
-  const {loading,error,products}=useSelector((state)=>state.products)
+  const {loading,error,products,query}=useSelector((state)=>state.products)
+  
  console.log(products)
   const dispatch=useDispatch();
   useEffect(() => {
    
-   dispatch(getAllProducts())
+   dispatch(getAllProducts(query))
+   dispatch(getProductCategories())
   //  getProducts()
   //     .then((response) => {
   //       setProductList(response.data);
@@ -21,14 +23,17 @@ const ProductList = () => {
   //     .catch((error)=>{
   //       console.log(error.response.data)
   //     });
-  }, [dispatch]);
+  }, [dispatch,query]);
  
   return (
     <>
-  
-      <section className="py-12 ps-8 pe-8 bg-slate-100">
-        <div className="max-w-screen-xl mx-auto px-4"></div>
+
+      <section className="py-12 ps-8 pe-10 bg-slate-100">
+      
+        <div className="max-w-screen-xl mx-auto px-1">
+        <ProductsFilter/>
         <div className=" w-full mx-auto px-4 relative">
+     
           <Title label="New Arrivals" className="ml-8"/>
          <Link to='add'>
          <button  type="button" className=" float:left ms-12 mb-2 md:absolute top-2 right-12  text-2xl font-semibold text-teal-700 rounded-md bg-white p-1 px-2 cursor-pointer  ">Add Product</button></Link>
@@ -40,6 +45,7 @@ const ProductList = () => {
 
           ))}
         </div>)}
+        </div>
       </section>
     </>
   );

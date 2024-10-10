@@ -26,7 +26,7 @@ const ProductsCard = (props) => {
    
     try {
       await deleteProduct(id);
-      dispatch(getAllProducts())
+      dispatch(getAllProducts({}))
       toast(`product ${name} deleted successfully`,{
         type:"success",
         outoClose:1500
@@ -57,9 +57,9 @@ const ProductsCard = (props) => {
         <p className="mt-4">{brand}</p>
         <p className="my-4">
           <span className="text-2xl font-serif ">
-            {Math.floor(price * 0.8)}
+            ${Math.floor(price * 0.8)}
           </span>{" "}
-          <span className="ml-1 line-through font-serif">{price}</span>
+          <span className="ml-1 line-through font-serif">${price}</span>
         </p>
         <div className="flex justify-between">
           <Link to={id}>

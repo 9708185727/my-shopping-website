@@ -32,7 +32,7 @@ const Header = () => {
             <button
               type="button"
               onClick={logout}
-              className="text-teal-700  text-2xl focus:ring-4 focus:outline-none focus:ring-teal-700 font-medium rounded-lg  px-4 py-2 text-center "
+              className="text-teal-700  text-2xl focus:ring-4 focus:outline-none focus:ring-teal-700 font-medium rounded-lg  px-2 py-2 text-center "
             >
             Logout<BiLogOut className="inline ml-2"/>
             </button>
