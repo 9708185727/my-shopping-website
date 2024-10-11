@@ -6,7 +6,7 @@ import {
 } from "../../redux/products/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 const ProductsFilter = () => {
-  const { categories } = useSelector((state) => state.products);
+  const { categories,query } = useSelector((state) => state.products);
   const dispatch = useDispatch();
   function setProductLimit(limit) {
     console.log(limit);
@@ -34,6 +34,7 @@ const ProductsFilter = () => {
           <input
             type="text"
             id="name"
+            value={query?.filters?.name}
             onChange={(e) => filterByName(e.target.value)}
             className="ms-2 border border-black-lg border-md"
           />
@@ -46,6 +47,7 @@ const ProductsFilter = () => {
             type="text"
             id="category"
             className="ms-2 border border-black-lg border-md"
+          value={query?.filters?.category}
             onChange={(e) => {
               filterByCategory(e.target.value);
             }}
@@ -69,6 +71,7 @@ const ProductsFilter = () => {
           <select
             type="text"
             id="short"
+            value={query?.sort}
             onChange={(e) => {
               sortProducts(e.target.value);
             }}
@@ -92,6 +95,7 @@ const ProductsFilter = () => {
           <select
             type="text"
             id="Limit "
+            value={query?.limit}
             className="ms-2 border border-black-lg border-md"
             onChange={(e) => {
               setProductLimit(e.target.value);

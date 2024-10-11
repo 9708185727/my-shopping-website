@@ -22,8 +22,8 @@ const Header = () => {
           <Link to={HOME_ROUTE}>
             <FaShopify className="text-green-600  h-8 w-8  inline mb-4 mr-2" />
 
-            <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">
-              Shopping
+            <span className="self-center text-3xl font-semibold font-serif whitespace-nowrap dark:text-white">
+              Shopfiy
             </span>
           </Link>
 
