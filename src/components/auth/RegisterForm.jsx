@@ -13,7 +13,7 @@ import { useForm } from "react-hook-form";
 import { EMAIL_REGEX, PASSWORD_REGEX } from "../../constants/Regex";
 import {  registerUser } from "../../redux/auth/authActions";
 import { MdEmail } from "react-icons/md";
-
+import IconHeader from "../IconHeader";
 import { useDispatch, useSelector } from "react-redux";
 import Spinner from "../products/Spinner";
 import { toast } from "react-toastify";
@@ -47,11 +47,12 @@ const RegisterForm = () => {
       >
         <div className="w-96 mt-16  ms-16 text-justify ">
           <h1 className="text-2xl font-bold text-teal-700 my-3">
-            Welcome to Shopifiy ! By creating an account, you unlock a world of
+           
+            Welcome to  <IconHeader/> ! By creating an account, you unlock a world of
             convenience and exclusive benefits:
           </h1>
 
-          <p className="font-serif ">
+          <p className="font-serif text-sm">
             Faster Checkout: Save your address and payment details to breeze
             through the checkout process in no time. Exclusive Offers: Enjoy
             access to members-only discounts, promotions, and early access to
@@ -68,7 +69,7 @@ const RegisterForm = () => {
 
         <div className="p-6 h-auto w-80  item-center  mt-4 lg:ms-36 ms-8  ">
           <div className="text-left mt-5 font-large  text-teal-700 text-3xl">
-            Register
+          SignUp
           </div>
           <div className="mt-5 relative">
             
@@ -124,18 +125,7 @@ const RegisterForm = () => {
               className="p-1 pr-9 pl-8 border-black text-black min-w-full rounded-full border border-2xl "
             />
             <p className="text-red-500 ms-2">{errors.password?.message}</p>
-            <div className="mt-5 text-center">
-            <div className="mt-5 max-w-full">
-              <input
-                type="checkbox"
-                id="myCheckbox"
-                className="text-black"
-                name="myCheckbox"
-              />
-              <p className="text-black inline ml-2 ">I Agree with <span className='text-red-500'>privacy</span>and <span className='text-red-500'>policy</span></p>
-             
-            </div>
-          </div>
+           
             <button
               type="button"
               onClick={() => setShowPassword(!showpassword)}
@@ -179,7 +169,18 @@ const RegisterForm = () => {
             </button>
           </div>
 
-          
+          <div className="mt-5 text-center">
+            <div className="mt-5 max-w-full">
+              <input
+                type="checkbox"
+                id="myCheckbox"
+                className="text-black"
+                name="myCheckbox"
+              />
+              <p className="text-black inline ml-2 ">I Agree with <span className='text-red-500'>privacy</span>and <span className='text-red-500'>policy</span></p>
+             
+            </div>
+          </div>
           <button
             type="submit"
             className="bg-teal-700 rounded-full text-center mt-8 text-white p-1 min-w-full text-md font-medium"

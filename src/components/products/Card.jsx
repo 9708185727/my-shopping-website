@@ -1,11 +1,11 @@
 import React from "react";
-import laptop from "../../assets/images/asus.png";
+import { useState } from "react";
+import imagePlaceHolder from "../../assets/images/imgplaceholder.png";
 import Modal from "./Modal";
 
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaPencil, FaTrash } from "react-icons/fa6";
-import { deleteProduct, getProducts } from "../../api/products";
+import { deleteProduct } from "../../api/products";
 import { getAllProducts } from "../../redux/products/productActions";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
@@ -13,34 +13,26 @@ import { toast } from "react-toastify";
 const ProductsCard = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { id, name, brand, category, price, url } = props;
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
-   
- 
   async function removeProduct() {
-    setIsOpen(true)
-    
-    
+    setIsOpen(true);
   }
   async function confirmDelete() {
-   
     try {
       await deleteProduct(id);
-      dispatch(getAllProducts({}))
-      toast(`product ${name} deleted successfully`,{
-        type:"success",
-        outoClose:1500
-      })
-     
-    
+      dispatch(getAllProducts({}));
+      toast(`product ${name} deleted successfully`, {
+        type: "success",
+        outoClose: 1500,
+      });
     } catch (error) {
       toast(error.response.data, {
         type: "error",
         outoClose: false,
       });
-    }
-    finally{
-      setIsOpen(false)
+    } finally {
+      setIsOpen(false);
     }
   }
   return (
@@ -52,7 +44,13 @@ const ProductsCard = (props) => {
         <p className="mt-2 p-1 absolute float-right top-2 right-3 text-white bg-teal-800 rounded-full">
           {category}
         </p>
-        <img src={url ?? laptop} alt="Error" className="h-60  w-auto "></img>
+        <Link to={id}>
+          <img
+            src={url ?? imagePlaceHolder}
+            alt="Error"
+            className="h-60  w-auto "
+          />
+        </Link>
         <h2 className="mt-4 text-xl font-semibold ">{name}</h2>
         <p className="mt-4">{brand}</p>
         <p className="my-4">
@@ -84,15 +82,18 @@ const ProductsCard = (props) => {
             </button>
           </div>
         </div>
-        </div>
-        <Modal
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          label="Delete Product"
-          body={<p>Are you sure you want to delete this product?</p>}
-          actions={<button className="bg-red-500 text-white" onClick={confirmDelete}>Confirm</button>}
-        />
-    
+      </div>
+      <Modal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        label="Delete Product"
+        body={<p>Are you sure you want to delete this product?</p>}
+        actions={
+          <button className="bg-red-500 text-white" onClick={confirmDelete}>
+            Confirm
+          </button>
+        }
+      />
     </>
   );
 };

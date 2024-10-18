@@ -15,6 +15,7 @@ import { MdEmail } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import Spinner from "../products/Spinner";
 import { toast } from "react-toastify";
+import IconHeader from "../IconHeader";
 
 const LoginForm = () => {
   const [showpassword, setShowPassword] = useState(false);
@@ -60,7 +61,7 @@ const LoginForm = () => {
             Welcome Back!
           </h1>
           <h3 className="text-2xl font-semibold my-2 text-teal-300">
-            Shopping Site
+            <IconHeader/>
           </h3>
           <p className="font-serif ">
             Log in to access your account, track your orders, and enjoy a
@@ -73,7 +74,7 @@ const LoginForm = () => {
         </div>
 
         <div className="p-6 h-auto w-80  item-center  mt-4 lg:ms-36 ms-8  ">
-          <div className="text-left mt-5 font-large  text-black text-3xl">
+          <div className="text-left mt-5 font-large  text-teal-700 text-3xl">
             Sign In
           </div>
           <div className="mt-5 relative">
