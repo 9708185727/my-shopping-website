@@ -8,6 +8,10 @@ const navMenu=[
 
 
     },
+    , {auth:true,
+        route:PRODUCTS_ROUTE,
+        label:"Products"
+    },
     {auth:true,
         route:ABOUT_ROUTE,
         label:"About",
@@ -28,11 +32,8 @@ const navMenu=[
         route:REGISTER_ROUTE,
         label:"Register"
     }
-    , {auth:true,
-        route:PRODUCTS_ROUTE,
-        label:"Products"
-    }
-   ,
+    
+   
 
 
 ]

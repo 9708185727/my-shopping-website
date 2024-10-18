@@ -19,7 +19,7 @@ const Home = () => {
         <div className="p-4 mx-12 max-w-96 mt-5  py-6 ">
           <h1 className=" text-3xl font-semibold">
             Dive Into Valuable Products{" "}
-            <span className="text-green-500 text-3xl font-semibold">Items</span>
+            <span className="text-teal-500 text-3xl font-semibold">Items</span>
           </h1>
           <p className="text-black mt-5 ">
             Where Each Shopping items gives you Satisfication with good
@@ -43,7 +43,7 @@ const Home = () => {
             className="text-lg font-semibold"
           />
         </div>
-        <div className="mx-12 p-2 grid grid-cols-4  space-x-2 rounded-lg">
+        <div className="mx-16 p-2 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4  space-x-2 rounded-lg">
           <SectB />
         </div>
       </section>
@@ -56,7 +56,7 @@ const Home = () => {
             See More <FaLongArrowAltRight className="text-green-500 inline" />
           </p></Link>
         </div>
-        <div className="mx-12 p-2  grid grid-cols-4 space-x-2 rounded-lg">
+        <div className="mx-16 p-2  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4  space-x-2 rounded-lg">
           <SectC/>
         </div>
       </section>

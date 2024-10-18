@@ -24,11 +24,11 @@ const Contact = () => {
 
   return (
     <>
-      <div className=" p-4 max-w-full max-h-screen m-0 mx-12 my-4 text-center h-auto  ">
-        <div className="grid grid-cols-2 me-20 p-2 ">
+      <div className="  max-w-full max-h-screen m-0 mx-10 my-4 text-center h-auto  ">
+        <div className="grid grid-cols-2 me-20  ">
 
       
-        <div className="p-8 my-3  w-96 shadow-md">
+        <div className="p-2 my-3 ms-12 w-96 shadow-md">
           <h1 className="text-center p-2 my-2 text-teal-700 text-3xl font-semibold">
             Contact Us
           </h1>

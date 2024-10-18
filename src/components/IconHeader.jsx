@@ -13,7 +13,7 @@ const IconHeader = () => {
         <Link to={HOME_ROUTE}>
        
         
-            <FaShopify className="text-green-600  h-8 w-8  inline mb-4 mr-2" />
+            <FaShopify className="text-teal-500  h-8 w-8  inline mb-4 mr-2" />
 
             <span className="self-center text-3xl font-semibold font-serif whitespace-nowrap dark:text-white">
               Shopfiy

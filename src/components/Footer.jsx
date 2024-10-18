@@ -7,12 +7,13 @@ import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialSkype } from "react-icons/ti";
 import IconHeader from "./IconHeader";
 import { ABOUT_ROUTE, HOME_ROUTE } from "../constants/routes";
+import { CiLocationOn } from "react-icons/ci";
 const Footer = () => {
   return (
     <>
-      <div className="space-x-10 rounded-lg  ">
-        <div className="mx-12 p-2 grid lg:grid-cols-4 md:grid-cols-2 gird-cols-1 ">
-          <div className="ms-2 my-3 p-2  max-w-auto max-h-auto ">
+      <div className=" rounded-lg  ">
+        <div className="mx-20  grid lg:grid-cols-4 md:grid-cols-2 gird-cols-1 ">
+          <div className="ms-2 my-3  max-w-auto max-h-auto ">
             <IconHeader />
             <p className=" text-sm mt-6 text-justify">
               we offer a curated selection of quality products tailored to meet
@@ -58,7 +59,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="https://maps.app.goo.gl/vgrd9YWgUmRUaFBQ6">
-                  ShopfiyGhar Kathamandu,nepal
+                 <CiLocationOn className="inline text-green-700"/> ShopfiyGhar Kathamandu,nepal
                 </a>
               </li>
 

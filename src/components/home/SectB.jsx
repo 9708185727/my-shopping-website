@@ -19,8 +19,8 @@ const { loading, products} = useSelector((state) => state.products);
   
       {products.map((menu) => {
         return (
-          <div className="ms-2 my-3  shadow-lg max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out">
-            <div className="relative bg-teal-300 h-36  text-center  rounded-lg ">
+          <div className="ms-2 my-3   shadow-lg max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out">
+            <div className="relative bg-teal-300 h-36  text-center p-2 rounded-lg ">
               <img
                 src={menu.url}
                 alt="Error"
