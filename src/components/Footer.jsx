@@ -10,51 +10,70 @@ import { ABOUT_ROUTE, HOME_ROUTE } from "../constants/routes";
 const Footer = () => {
   return (
     <>
-      <div className="ms-2 my-3 p-2  max-w-auto max-h-auto ">
-        <IconHeader />
-        <p className=" text-sm mt-6 text-justify">
-          we offer a curated selection of quality products tailored to meet your
-          lifestyle needs. Whether you're shopping for the latest trends. Our commitment to excellent customer service,
-          fast delivery, and competitive pricing makes us for convenient, reliable shopping
-        </p>
-        <p className="mt-2 text-1xl font-semibold">
-          Location: Baneshower, Kathamandu
-        </p>
-      </div>
-
-      <div className="ms-2 my-2 p-2   max-w-auto max-h-auto ">
-        <h1 className="my-3 font-semibold text-2xl">Useful Links</h1>
-        <ul className="space-y-7 mt-8">
-          <NavLink to={ABOUT_ROUTE}>
-            <li className="hover:text-slate-500">About Us</li>
-          </NavLink>
-          <li className="hover:text-slate-500">Events</li>
-          <li className="hover:text-slate-500">FQA</li>
-        </ul>
-      </div>
-      <div className="ms-2 my-2 p-2  max-w-auto max-h-auto ">
-        <h1 className="my-3 font-semibold text-2xl">Main Menu</h1>
-        <ul className="space-y-7 mt-8">
-          <NavLink to={HOME_ROUTE}>
-            <li className="hover:text-slate-500">Home</li>
-          </NavLink>
-          <li className="hover:text-slate-500">Menu</li>
-          <li className="hover:text-slate-500">Services</li>
-        </ul>
-      </div>
-      <div className="ms-2 my-3 p-2   max-w-auto max-h-auto ">
-        <h1 className="my-3 font-semibold text-2xl">Contact Us</h1>
-        <ul className="space-y-6 mt-8">
-          <li>Shopifyghar@gmail.com</li>
-
-          <li>9804621925</li>
-          <div className=" mt-8 ">
-            <FaFacebook className=" bg-white text-blue-600 inline" />
-            <TiSocialTwitter className="ml-2 inline bg-white text-blue-600" />
-            <TiSocialSkype className="ml-2 inline bg-white text-red-600 " />
-            <PiInstagramLogoLight className="ml-2 inline bg-white text-red-600 " />
+      <div className="space-x-10 rounded-lg  ">
+        <div className="mx-12 p-2 grid lg:grid-cols-4 md:grid-cols-2 gird-cols-1 ">
+          <div className="ms-2 my-3 p-2  max-w-auto max-h-auto ">
+            <IconHeader />
+            <p className=" text-sm mt-6 text-justify">
+              we offer a curated selection of quality products tailored to meet
+              your lifestyle needs. Whether you're shopping for the latest
+              trends. Our commitment to excellent customer service, fast
+              delivery, and competitive pricing makes us for convenient,
+              reliable shopping
+            </p>
+            <p className="mt-2 text-1xl font-semibold">
+              Location: Baneshower, Kathamandu
+            </p>
           </div>
-        </ul>
+
+          <div className="ms-2 my-2 p-2   max-w-auto max-h-auto ">
+            <h1 className="my-3 font-semibold text-2xl">Useful Links</h1>
+            <ul className="space-y-7 mt-8">
+              <NavLink to={ABOUT_ROUTE}>
+                <li className="hover:text-slate-500">About Us</li>
+              </NavLink>
+              <li className="hover:text-slate-500">Events</li>
+              <li className="hover:text-slate-500">FQA</li>
+            </ul>
+          </div>
+          <div className="ms-2 my-2 p-2  max-w-auto max-h-auto ">
+            <h1 className="my-3 font-semibold text-2xl">Main Menu</h1>
+            <ul className="space-y-7 mt-8">
+              <NavLink to={HOME_ROUTE}>
+                <li className="hover:text-slate-500">Home</li>
+              </NavLink>
+              <li className="hover:text-slate-500">Menu</li>
+              <li className="hover:text-slate-500">Services</li>
+            </ul>
+          </div>
+          <div className="ms-2 my-3 p-2   max-w-auto max-h-auto ">
+            <h1 className="my-3 font-semibold text-2xl">Contact Us</h1>
+            <ul className="space-y-6 mt-8">
+              <li>
+                <a href="mailto:Shopifyghar@gmail.com">Shopifyghar@gmail.com</a>
+              </li>
+              <li>
+                {" "}
+                <a href="tel:9865809181"> 9865809181</a>
+              </li>
+              <li>
+                <a href="https://maps.app.goo.gl/vgrd9YWgUmRUaFBQ6">
+                  ShopfiyGhar Kathamandu,nepal
+                </a>
+              </li>
+
+              <div className=" mt-8 ">
+                <FaFacebook className=" bg-white text-blue-600 inline" />
+                <TiSocialTwitter className="ml-2 inline bg-white text-blue-600" />
+                <TiSocialSkype className="ml-2 inline bg-white text-red-600 " />
+                <PiInstagramLogoLight className="ml-2 inline bg-white text-red-600 " />
+              </div>
+            </ul>
+          </div>
+        </div>
+        <footer className="my-2 w-full text-center float-right ">
+          &copy;2024. All Rights Reserved
+        </footer>
       </div>
     </>
   );

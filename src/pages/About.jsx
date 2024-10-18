@@ -41,7 +41,7 @@ const About = () => {
                 <li>24/7 customer support</li>
               </ul>
             </div>
-            <section>
+            <div >
               <h2 className="mt-8 mb-4 text-2xl text-teal-400">
                 Our Commitment to You
               </h2>
@@ -51,14 +51,13 @@ const About = () => {
                 assist you in finding exactly what you need and ensuring your
                 satisfaction.
               </p>
-            </section>
+            </div>
           </div>
         </div>
       </section>
       <section className="bg-white max-w-screen-xl h-auto   relative">
-        <div className="mx-20 p-2 grid lg:grid-cols-4 md:grid-cols-2 gird-cols-1 space-x-14 rounded-lg shadow-lg ">
-          <Footer/>
-        </div>
+      <Footer/>
+     
       </section>
     </>
   );

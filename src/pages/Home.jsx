@@ -12,6 +12,9 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
+
+
+
       <section className=" max-w-screen-xl h-70  lg:flex justify-between sm:flex row-span-1 shadow-lg shadow-black  ">
         <div className="p-4 mx-12 max-w-96 mt-5  py-6 ">
           <h1 className=" text-3xl font-semibold">
@@ -58,9 +61,8 @@ const Home = () => {
         </div>
       </section>
       <section className="bg-white max-w-screen-xl h-auto relative">
-        <div className="mx-16 p-2 grid lg:grid-cols-4 md:grid-cols-2 gird-cols-1 space-x-14 rounded-lg shadow-lg ">
-          <Footer />
-        </div>
+      <Footer />
+       
       </section>
     </>
   );
