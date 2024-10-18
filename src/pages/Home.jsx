@@ -39,8 +39,8 @@ const Home = () => {
       <section className="bg-white max-w-screen-xl h-auto shadow-black-2xl shadow-lg rounded-lg">
         <div className="mx-16 p-2">
           <Title
-            label="All Products"
-            className="text-lg font-semibold"
+            label="Our Products"
+            className="text-2xl font-semibold"
           />
         </div>
         <div className="mx-16 p-2 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4  space-x-2 rounded-lg">
@@ -50,15 +50,17 @@ const Home = () => {
 
       <section className="bg-white max-w-screen-xl h-auto shadow-black-2xl shadow-lg relative">
         <div className="mx-16 p-2">
-          <Title label="Latest Products" className="text-lg font-semibold" />
+          <Title label=" Categories Product" className="text-2xl font-semibold" />
 
         <Link to={PRODUCTS_ROUTE}>  <p className="inline text-black text-md absolute top-2 right-14 mx-14">
             See More <FaLongArrowAltRight className="text-green-500 inline" />
           </p></Link>
         </div>
-        <div className="mx-16 p-2  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4  space-x-2 rounded-lg">
-          <SectC/>
-        </div>
+      
+          <SectC category="smartphone"/>
+          <SectC category="electronics"/>
+          <SectC category="laptop"/>
+        
       </section>
       <section className="bg-white max-w-screen-xl h-auto relative">
       <Footer />

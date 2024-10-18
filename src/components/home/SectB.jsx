@@ -1,17 +1,22 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 
-import { useSelector } from "react-redux";
+
 import { IoIosStarOutline } from "react-icons/io";
 
 
-
+import { getProducts } from "../../api/products";
 
 const SectB = () => {
 
-const { loading, products} = useSelector((state) => state.products);
 
-
-
+const [products, setProducts ] = useState([]);
+useEffect(() => {
+  getProducts({ limit: 8})
+    .then((response) => {
+      setProducts(response.data);
+    })
+    .catch();
+}, []);
 
 
   return (
