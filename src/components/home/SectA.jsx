@@ -1,5 +1,5 @@
 import React from 'react'
-import Iphone from '../../assets/images/iphone.png'
+
 import Hero from './Hero'
 
 const SectA = () => {

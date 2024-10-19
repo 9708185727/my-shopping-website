@@ -9,12 +9,11 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { PRODUCTS_ROUTE } from "../constants/routes";
 import { Link } from "react-router-dom";
 
+import CatList from "./CatList";
+
 const Home = () => {
   return (
     <>
-
-
-
       <section className=" max-w-screen-xl h-70  lg:flex justify-between sm:flex row-span-1 shadow-lg shadow-black  ">
         <div className="p-4 mx-12 max-w-96 mt-5  py-6 ">
           <h1 className=" text-3xl font-semibold">
@@ -38,10 +37,7 @@ const Home = () => {
 
       <section className="bg-white max-w-screen-xl h-auto shadow-black-2xl shadow-lg rounded-lg">
         <div className="mx-16 p-2">
-          <Title
-            label="Our Products"
-            className="text-2xl font-semibold"
-          />
+          <Title label="Our Products" className="text-2xl font-semibold" />
         </div>
         <div className="mx-16 p-2 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4  space-x-2 rounded-lg">
           <SectB />
@@ -50,21 +46,24 @@ const Home = () => {
 
       <section className="bg-white max-w-screen-xl h-auto shadow-black-2xl shadow-lg relative">
         <div className="mx-16 p-2">
-          <Title label=" Categories Product" className="text-2xl font-semibold" />
+          <Title
+            label=" Categories Product"
+            className="text-2xl font-semibold"
+          />
 
-        <Link to={PRODUCTS_ROUTE}>  <p className="inline text-black text-md absolute top-2 right-14 mx-14">
-            See More <FaLongArrowAltRight className="text-green-500 inline" />
-          </p></Link>
+
+          <Link to={PRODUCTS_ROUTE}>
+            {" "}
+            <p className="inline text-black text-md absolute top-2 right-14 mx-14">
+              See More <FaLongArrowAltRight className="text-green-500 inline" />
+            </p>
+          </Link>
         </div>
-      
-          <SectC category="smartphone"/>
-          <SectC category="electronics"/>
-          <SectC category="laptop"/>
-        
+
+        <CatList/>
       </section>
       <section className="bg-white max-w-screen-xl h-auto relative">
-      <Footer />
-       
+        <Footer />
       </section>
     </>
   );

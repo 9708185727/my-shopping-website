@@ -1,30 +1,27 @@
-import React,{useState,useEffect} from "react";
-
+import React, { useState, useEffect } from "react";
 
 import { IoIosStarOutline } from "react-icons/io";
-
 
 import { getProducts } from "../../api/products";
 
 const SectB = () => {
-
-
-const [products, setProducts ] = useState([]);
-useEffect(() => {
-  getProducts({ limit: 8})
-    .then((response) => {
-      setProducts(response.data);
-    })
-    .catch();
-}, []);
-
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    getProducts({ limit: 8 })
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch();
+  }, []);
 
   return (
     <>
-  
       {products.map((menu) => {
         return (
-          <div className="ms-2 my-3   shadow-lg max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out">
+          <div
+          key={menu._id}
+            className="ms-2 my-3   shadow-lg max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out"
+          >
             <div className="relative bg-teal-300 h-36  text-center p-2 rounded-lg ">
               <img
                 src={menu.url}
@@ -39,11 +36,13 @@ useEffect(() => {
 
             <h2 className="ms-2 my-2 text-xl font-semibold ">{menu.name}</h2>
             <p className="my-4">
-          <span className="text-2xl font-serif ">
-            ${Math.floor(menu.price * 0.8)}
-          </span>{" "}
-          <span className="ml-1 line-through font-serif">${menu.price}</span>
-        </p>
+              <span className="text-2xl font-serif ">
+                ${Math.floor(menu.price * 0.8)}
+              </span>{" "}
+              <span className="ml-1 line-through font-serif">
+                ${menu.price}
+              </span>
+            </p>
           </div>
         );
       })}
