@@ -3,7 +3,7 @@ import Title from "../components/Title";
 import Footer from "../components/Footer";
 import SectA from "../components/home/SectA";
 import SectB from "../components/home/SectB";
-import SectC from "../components/home/SectC";
+
 
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { PRODUCTS_ROUTE } from "../constants/routes";
