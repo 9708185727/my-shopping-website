@@ -80,7 +80,7 @@ const ProductList = () => {
           
           }
         </div>
-        <section className="bg-white max-w-screen-xl h-auto mt-3   relative">
+        <section className="bg-white max-w-screen-xl h-auto mt-3 mx-12  relative">
       <Footer/>
      
       </section>
