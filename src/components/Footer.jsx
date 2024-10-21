@@ -18,9 +18,7 @@ const Footer = () => {
             <p className=" text-sm mt-6 text-justify">
               we offer a curated selection of quality products tailored to meet
               your lifestyle needs. Whether you're shopping for the latest
-              trends. Our commitment to excellent customer service, fast
-              delivery, and competitive pricing makes us for convenient,
-              reliable shopping
+              trends. 
             </p>
             <p className="mt-2 text-1xl font-semibold">
               Location: Baneshower, Kathamandu

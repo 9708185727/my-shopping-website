@@ -10,6 +10,7 @@ import {
   getProductCategories,
 } from "../../redux/products/productActions.js";
 import { resetQuery } from "../../redux/products/productSlice.js";
+import Footer from "../../components/Footer.jsx";
 const ProductList = () => {
   const { loading, products, query } = useSelector((state) => state.products);
 
@@ -79,6 +80,10 @@ const ProductList = () => {
           
           }
         </div>
+        <section className="bg-white max-w-screen-xl h-auto mt-3   relative">
+      <Footer/>
+     
+      </section>
       </section>
     </>
   );
