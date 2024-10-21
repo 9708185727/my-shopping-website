@@ -29,10 +29,7 @@ const addProduct = async (data) => {
   return response;
 };
 const editProduct = async (id, data) => {
-  const response = await axios.put(
-    `${config.baseApiUrl}/api/products/${id}`,
-    data,
-    {
+  const response = await axios.put(`${config.baseApiUrl}/api/products/${id}`,data,{
       headers: {
         Authorization: `Bearer ${authToken}`,
       },

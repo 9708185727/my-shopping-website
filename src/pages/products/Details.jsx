@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from "react";
-import { FaCartPlus, FaSpinner } from "react-icons/fa";
+import { FaCartPlus} from "react-icons/fa";
 import { GrStar } from "react-icons/gr";
 import laptop from "../../assets/images/asus.png";
 import { Link } from "react-router-dom";

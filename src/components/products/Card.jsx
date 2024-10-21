@@ -12,7 +12,8 @@ import { toast } from "react-toastify";
 
 const ProductsCard = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { id, name, brand, category, price, url } = props;
+  const { id, name, brand,description, category, price, url } = props;
+  
   const dispatch = useDispatch();
 
   async function removeProduct() {
@@ -53,13 +54,14 @@ const ProductsCard = (props) => {
         </Link>
         <h2 className="mt-4 text-xl font-semibold ">{name}</h2>
         <p className="mt-4">{brand}</p>
-        <p className="my-4">
+        <p className="mt-4 text-justify">{description}</p>
+        <p className="mt-9">
           <span className="text-2xl font-serif ">
             ${Math.floor(price * 0.8)}
           </span>{" "}
           <span className="ml-1 line-through font-serif">${price}</span>
         </p>
-        <div className="flex justify-between">
+        <div className="flex justify-between  mt-4">
           <Link to={id}>
             <button className="px-2 py-1 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white">
               Buy Now

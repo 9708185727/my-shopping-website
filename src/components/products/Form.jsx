@@ -83,6 +83,17 @@ const ProductsForm = ({ product }) => {
           </div>
           <div className="mt-5 relative">
             <input
+              type="text"
+              {...register("description", {
+                required: "Please Enter description name ",
+              })}
+              placeholder="Enter product description"
+              className="p-1 pr-9 pl-8 text-black min-w-full rounded-full border border-2xl  border-black"
+            />
+            <p className="text-red-500 ms-2">{errors.description?.message}</p>
+          </div>
+          <div className="mt-5 relative">
+            <input
               type="number"
               {...register("price", {
                 required: "Please enter product price ",

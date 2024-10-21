@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <>
       <div className="  max-w-full max-h-screen m-0 mx-10 my-4 text-center h-auto  ">
-        <div className="grid grid-cols-2 me-20  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 me-20  ">
 
       
         <div className="p-2 my-3 ms-12 w-96 shadow-md">
@@ -89,9 +89,11 @@ const Contact = () => {
         <div className="w-full mt-10">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.197181452384!2d81.11920227466061!3d28.533792375718768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a20d9dd64aa6a1%3A0xeacbf5519707949c!2sRN%20motor%20work%20shop!5e0!3m2!1sen!2snp!4v1729240026519!5m2!1sen!2snp"
-            width="600"
+          md:width="600"
+          lg:width="600"
+          width="380"
             height="400"
-            className="rounded-lg"
+            className="rounded-lg ms-12"
           
             allowfullscreen=""
             loading="lazy"
@@ -100,7 +102,7 @@ const Contact = () => {
         </div>  
         </div>
 
-        <section className="bg-white max-w-screen-xl h-auto   relative">
+        <section className="bg-white max-w-screen-xl h-auto mt-5  relative">
         <Footer />
         </section>
       </div>

@@ -61,7 +61,7 @@ const ProductList = () => {
             <ProductsLoader />
           ) :   products.length == 0 ? (
             <h2 className="w-full  mt-24 text-center justify text-red-500">
-              Product search doesnot match....
+              Product not found 
             </h2>
           ) : (
             <div className=" grid gap-5 grid-cols-1  mx-10 md:grid-cols-2 lg:grid-cols-3 ">

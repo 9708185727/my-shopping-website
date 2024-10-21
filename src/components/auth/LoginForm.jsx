@@ -63,11 +63,11 @@ const LoginForm = () => {
           <h3 className="text-2xl font-semibold my-2 text-teal-300">
             <IconHeader/>
           </h3>
-          <p className="font-serif ">
+          <p className="font-serif text-justify ">
             Log in to access your account, track your orders, and enjoy a
             personalized shopping experience. Don't have an account yet?
           </p>
-          <p className="font-serif my-3">
+          <p className="font-serif my-3 text-justify">
             <span className="text-1xl font-semibold mr-2 "> Sign up</span>
             now to unlock exclusive offers and faster checkout.
           </p>

@@ -43,16 +43,16 @@ const RegisterForm = () => {
     <>
       <form
         onSubmit={handleSubmit(submitFormRegister)}
-        className="flex flex-col lg:flex-row h-auto mx-16 p-2 max-w-auto  mt-0 rounded-lg shadow-lg  justify-around "
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-auto mx-16 p-2 max-w-auto  mt-0  justify-around "
       >
-        <div className="w-96 mt-16  ms-16 text-justify ">
-          <h1 className="text-2xl font-bold text-teal-700 my-3">
+        <div className="w-96 mt-16  ms-16 ">
+          <h1 className="text-2xl font-bold text-teal-700 my-3 ">
            
             Welcome to  <IconHeader/> ! By creating an account, you unlock a world of
             convenience and exclusive benefits:
           </h1>
 
-          <p className="font-serif text-sm">
+          <p className="font-serif text-sm  text-justify">
             Faster Checkout: Save your address and payment details to breeze
             through the checkout process in no time. Exclusive Offers: Enjoy
             access to members-only discounts, promotions, and early access to
@@ -62,7 +62,7 @@ const RegisterForm = () => {
             wishlist and shop whenever you're ready.
           </p>
           <p className="font-serif my-3">
-            <span className="text-1xl font-semibold mr-2 "> Sign In</span>
+            <span className="text-1xl font-semibold mr-2 text-justify "> Sign In</span>
             now to unlock exclusive offers and faster checkout.
           </p>
         </div>
