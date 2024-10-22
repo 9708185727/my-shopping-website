@@ -159,7 +159,7 @@ const RegisterForm = () => {
             <button
               type="button"
               onClick={() => setShowPassword(!showpassword)}
-              className="absolute top-1 right-3 text-teal-500 hover:text-teal-700 hover:cursor-pointer "
+              className="absolute top-1 right-[2px] md:right-3 lg:right-3 text-teal-500 hover:text-teal-700 hover:cursor-pointer "
             >
               {showpassword ? (
                 <FaEye className="mt-1" />
@@ -182,14 +182,14 @@ const RegisterForm = () => {
               }
               
               })}
-              placeholder="Enter Confirm Password"
+              placeholder="Confirm Password"
               className="p-1 pr-9 pl-8 border-black text-black min-w-full rounded-full border border-2xl "
             />
             <p className="text-red-500 ms-2">{errors.confirmPassword?.message}</p>
             <button
               type="button"
               onClick={() => setShowPassword(!showpassword)}
-              className="absolute top-1 right-3 text-teal-500 hover:text-teal-700 hover:cursor-pointer "
+              className="absolute top-1 right-[1px] md:right-3 lg:right-3 text-teal-500 hover:text-teal-700 hover:cursor-pointer "
             >
               {showpassword ? (
                 <FaEye className="mt-1" />
