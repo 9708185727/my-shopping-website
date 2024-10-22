@@ -54,9 +54,9 @@ const LoginForm = () => {
     <>
       <form
         onSubmit={handleSubmit(submitForm)}
-        className="flex flex-col lg:flex-row h-auto mx-16 p-2 max-w-auto  mt-0 rounded-lg shadow-lg  justify-around "
+        className="flex flex-col lg:flex-row h-auto mx-16 p-2 w-auto  mt-0 rounded-lg   justify-around "
       >
-        <div className="w-96 mt-16  ms-16 text-justify ">
+        <div className="w-auto mt-16  ms-16 text-justify ">
           <h1 className="text-2xl font-bold text-teal-700 my-3">
             Welcome Back!
           </h1>
@@ -73,12 +73,12 @@ const LoginForm = () => {
           </p>
         </div>
 
-        <div className="p-6 h-auto w-80  item-center  mt-4 lg:ms-36 ms-8  ">
+        <div className="p-6 h-auto w-auto  item-center  mt-4 lg:ms-36 ms-8  ">
           <div className="text-left mt-5 font-large  text-teal-700 text-3xl">
             Sign In
           </div>
           <div className="mt-5 relative">
-            <MdEmail className="absolute top-2.5 left-2 text-black" />
+            <MdEmail className="absolute top-2.5  left-2 text-black " />
             <input
               type="email"
               {...register("email", {
@@ -89,7 +89,7 @@ const LoginForm = () => {
                     "Please enter a valid email address (e.g., user@example.com).",
                 },
               })}
-              placeholder="Enter Email"
+              placeholder="Enter valid Email"
               className="p-1 pr-9 pl-8 text-black min-w-full rounded-full border border-2xl  border-black"
             />
             <p className="text-red-500 ms-2">{errors.email?.message}</p>
@@ -105,12 +105,12 @@ const LoginForm = () => {
                   message: "password length must be greater than 8",
                 },
               })}
-              placeholder="Enter Password" className="p-1 pr-9 pl-8 border-black text-black min-w-full rounded-full border border-2xl "/>
+              placeholder="Enter Password" className="p-1 pr-9 pl-8 border-black text-black min-w-full  rounded-full border border-2xl "/>
             <p className="text-red-500 ms-2">{errors.password?.message}</p>
             <button
               type="button"
               onClick={() => setShowPassword(!showpassword)}
-              className="absolute top-1 right-3 text-teal-500 hover:text-teal-700 hover:cursor-pointer "
+              className="absolute top-1 right-[2px] md:right-3 lg:right-3 text-teal-500 hover:text-teal-700 hover:cursor-pointer "
             >
               {showpassword ? (
                 <FaEye className="mt-1" />

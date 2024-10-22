@@ -12,11 +12,12 @@ import { TiSocialSkype } from "react-icons/ti";
 import { useForm } from "react-hook-form";
 import { EMAIL_REGEX, PASSWORD_REGEX } from "../../constants/Regex";
 import {  registerUser } from "../../redux/auth/authActions";
-import { MdEmail } from "react-icons/md";
+import { MdContactPhone, MdEmail } from "react-icons/md";
 import IconHeader from "../IconHeader";
 import { useDispatch, useSelector } from "react-redux";
 import Spinner from "../products/Spinner";
 import { toast } from "react-toastify";
+import { CiLocationOn } from "react-icons/ci";
 
 const RegisterForm = () => {
     const [showpassword, setShowPassword] = useState(false);
@@ -45,12 +46,13 @@ const RegisterForm = () => {
         onSubmit={handleSubmit(submitFormRegister)}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-auto mx-16 p-2 max-w-auto  mt-0  justify-around "
       >
-        <div className="w-96 mt-16  ms-16 ">
+        <div className="w-auto mt-12  ms-16 ">
           <h1 className="text-2xl font-bold text-teal-700 my-3 ">
            
             Welcome to  <IconHeader/> ! By creating an account, you unlock a world of
             convenience and exclusive benefits:
           </h1>
+-
 
           <p className="font-serif text-sm  text-justify">
             Faster Checkout: Save your address and payment details to breeze
@@ -67,7 +69,7 @@ const RegisterForm = () => {
           </p>
         </div>
 
-        <div className="p-6 h-auto w-80  item-center  mt-4 lg:ms-36 ms-8  ">
+        <div className="p-6 h-auto w-auto  item-center  mt-4 lg:ms-36 ms-8  ">
           <div className="text-left mt-5 font-large  text-teal-700 text-3xl">
           SignUp
           </div>
@@ -84,6 +86,34 @@ const RegisterForm = () => {
               className="p-1 pr-9 pl-8 text-black min-w-full rounded-full border border-2xl  border-black"
             />
             <p className="text-red-500 ms-2">{errors.name?.message}</p>
+          </div>
+          <div className="mt-5 relative">
+            
+            <CiLocationOn className="absolute top-2.5 left-2 text-black" />
+            <input
+              type="address"
+              {...register("address", {
+                required: "Please enter full address",
+              
+              })}
+              placeholder="Enter fulll address"
+              className="p-1 pr-9 pl-8 text-black min-w-full rounded-full border border-2xl  border-black"
+            />
+            <p className="text-red-500 ms-2">{errors.address?.message}</p>
+          </div>
+          <div className="mt-5 relative">
+            
+            <MdContactPhone className="absolute top-2.5 left-2 text-black" />
+            <input
+              type="phone"
+              {...register("phone", {
+                required: "Please enter full phone",
+              
+              })}
+              placeholder="Enter fulll phone"
+              className="p-1 pr-9 pl-8 text-black min-w-full rounded-full border border-2xl  border-black"
+            />
+            <p className="text-red-500 ms-2">{errors.phone?.message}</p>
           </div>
           <div className="mt-5 relative">
             <MdEmail className="absolute top-2.5 left-2 text-black" />

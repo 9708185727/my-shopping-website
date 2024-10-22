@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <div className=" rounded-lg  ">
         <div className="mx-20  grid lg:grid-cols-4 md:grid-cols-2 gird-cols-1 ">
-          <div className="ms-2 my-3  max-w-auto max-h-auto ">
+          <div className="ms-2 my-3  max-w-auto max-h-auto  ">
             <IconHeader />
             <p className=" text-sm mt-6 text-justify">
               we offer a curated selection of quality products tailored to meet
