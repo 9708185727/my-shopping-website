@@ -2,7 +2,7 @@ import React from "react";
 import { IoIosStarOutline } from "react-icons/io";
 
 import { LuBus } from "react-icons/lu";
-import { FaHeart } from "react-icons/fa";
+
 
 import Title from "../Title";
 const SectC = ({ MenuData, selectedCategory }) => {

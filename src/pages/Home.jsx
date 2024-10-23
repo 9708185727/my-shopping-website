@@ -54,7 +54,7 @@ const Home = () => {
 
           <Link to={PRODUCTS_ROUTE}>
             {" "}
-            <p className="inline text-black text-md absolute top-2 mb-5 right-14 mx-14">
+            <p className="inline text-black text-md absolute top-20 md:top-2 lg:top-2 mb-5 right-14 ms-2">
               See More <FaLongArrowAltRight className="text-green-500 sm:space-y-5 inline" />
             </p>
           </Link>
@@ -62,7 +62,7 @@ const Home = () => {
 
         <CatList/>
       </section>
-      <section className="bg-white max-w-screen-xl h-auto relative">
+      <section className="bg-white max-w-screen-xl h-auto relative ">
         <Footer />
       </section>
     </>

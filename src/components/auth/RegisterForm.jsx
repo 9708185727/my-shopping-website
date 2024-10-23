@@ -44,7 +44,7 @@ const RegisterForm = () => {
     <>
       <form
         onSubmit={handleSubmit(submitFormRegister)}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-auto mx-16 p-2 max-w-auto  mt-0  justify-around "
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-auto mx-5 md:mx-16 lg:mx-16  p-2 max-w-auto  mt-0  justify-around "
       >
         <div className="w-auto mt-12  ms-16 ">
           <h1 className="text-2xl font-bold text-teal-700 my-3 ">
