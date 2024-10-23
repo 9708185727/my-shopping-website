@@ -25,7 +25,7 @@ const SectC = ({ MenuData, selectedCategory }) => {
                 <img
                   src={menu.url}
                   alt="Error"
-                  className="h-24 rounded-full  w-auto ms-16 "
+                  className="h-24 rounded-full  w-auto ms-8 md:ms-16 lg:ms-24 "
                 />
                 <p className="ms-3 my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
                   {menu.category}
