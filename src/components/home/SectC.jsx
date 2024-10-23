@@ -21,7 +21,7 @@ const SectC = ({ MenuData, selectedCategory }) => {
             key={menu._id}
               className="ms-2 my-3  text-center shadow-lg  md:max-w-auto lg:max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out"
             >
-              <div className="relative bg-teal-300 h-36  text-center p-2 rounded-lg justify-center ">
+              <div className="relative bg-teal-100 h-36   p-2 rounded-lg  ">
                 <img
                   src={menu.url}
                   alt="Error"
