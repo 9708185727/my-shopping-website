@@ -21,7 +21,7 @@ const SectC = ({ MenuData, selectedCategory }) => {
             key={menu._id}
               className="ms-2 my-3 text-center  shadow-lg  min-w-48 max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out"
             >
-              <div className="relative bg-teal-300 h-36 w-36 md:w-auto lg:w-auto mx-10 p-2 rounded-lg  ">
+              <div className="relative bg-teal-300 h-36 w-36 md:w-auto lg:w-auto mx-8 p-2 rounded-lg  ">
                 <img
                   src={menu.url}
                   alt="Error"
@@ -33,17 +33,17 @@ const SectC = ({ MenuData, selectedCategory }) => {
                 </p>
               </div>
   
-              <h2 className="ms-4 my-2 text-xl font-semibold ">{menu.name}</h2>
-              <p className="my-4 ms-2">
+              <h2 className="my-2 text-xl font-semibold ">{menu.name}</h2>
+              <p className="my-4 ">
                 <span className="text-2xl font-serif ">
                   ${Math.floor(menu.price * 0.8)}
                 </span>{" "}
-                <span className="ml-1 line-through font-serif">
+                <span className=" line-through font-serif">
                   ${menu.price}
                 </span>
               </p>
         
-              <p className="text-slate-700 ms-2 my-2 p-1">
+              <p className="text-slate-700  my-2 p-1">
                 <LuBus className="inline mr-2 text-zinc-900" />
                 Free Delivery
               </p>

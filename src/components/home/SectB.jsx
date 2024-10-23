@@ -28,18 +28,18 @@ const SectB = () => {
                 alt="Error"
                 className="h-24 rounded-full  w-24 ms-3 md:ms-16 lg:ms-24  "
               />
-              <p className="ms-2 my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
+              <p className=" my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
                 {menu.category}
                 <IoIosStarOutline className="inline ms-1 mb-1 text-red-500" />
               </p>
             </div>
 
-            <h2 className="ms-3 my-2 text-xl font-semibold ">{menu.name}</h2>
-            <p className="my-4 ms-4">
+            <h2 className="my-2 text-xl font-semibold ">{menu.name}</h2>
+            <p className="my-4 ">
               <span className="text-2xl font-serif ">
                 ${Math.floor(menu.price * 0.8)}
               </span>{" "}
-              <span className="ml-1 line-through font-serif">
+              <span className=" line-through font-serif">
                 ${menu.price}
               </span>
             </p>
