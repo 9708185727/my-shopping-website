@@ -21,13 +21,13 @@ const SectC = ({ MenuData, selectedCategory }) => {
               key={menu._id}
               className="ms-2 my-3   shadow-lg max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out"
             >
-              <div className="relative bg-teal-300  text-center p-2 rounded-full ">
+              <div className=" bg-teal-300  text-center p-2 rounded-lg ">
                 <img
                   src={menu.url}
                   alt="Error"
-                  className="h-24 rounded-full max-w-24 max-h-24  mx-16 "
+                  className=" rounded-full max-w-24 max-h-24  mx-16 "
                 />
-                <p className="ms-2 my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
+                <p className="ms-2 my-3 p-2 text-black rounded-full float-left mb-56 ">
                   {menu.category}
                   <IoIosStarOutline className="inline ms-1 mb-1 text-red-500" />
                 </p>
