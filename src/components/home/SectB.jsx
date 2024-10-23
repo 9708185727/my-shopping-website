@@ -26,7 +26,7 @@ const SectB = () => {
               <img
                 src={menu.url}
                 alt="Error"
-                className="h-24 rounded-full  w-24 ms-3 md:ms-16 lg:ms-24  "
+                className="h-24 rounded-full  w-24 ms-3 md:ms-16 lg:ms-16  "
               />
               <p className=" my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
                 {menu.category}
