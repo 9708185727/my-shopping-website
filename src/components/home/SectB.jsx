@@ -20,13 +20,13 @@ const SectB = () => {
         return (
           <div
           key={menu._id}
-            className="ms-2 my-3   shadow-lg max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out"
+            className="ms-2 my-3 text-center  shadow-lg max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out"
           >
-            <div className="relative bg-teal-300 h-36  text-center p-2 rounded-lg ">
+            <div className="relative bg-teal-300 h-36  mx-10 p-2 rounded-lg ">
               <img
                 src={menu.url}
                 alt="Error"
-                className="h-24 rounded-full  w-24 "
+                className="h-24 rounded-full mx-10 w-24 "
               />
               <p className="ms-2 my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
                 {menu.category}
