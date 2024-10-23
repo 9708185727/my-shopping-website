@@ -24,7 +24,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="  max-w-auto max-h-screen  mx-6 md:mx-10 lg:mx-10 my-4 text-center h-auto  ">
+      <div className="  max-w-screen-xl max-h-screen  mx-2 md:mx-10 lg:mx-10 my-4 text-center h-auto  ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 me-20  ">
 
       
@@ -37,7 +37,7 @@ const Contact = () => {
             we'll get back to you as soon as possible.
           </p>
 
-          <form className="text-center my-4 " onSubmit={handleSubmit}>
+          <form className="text-center my-4 w-auto" onSubmit={handleSubmit}>
             <div className="form-group my-4 ">
               <label htmlFor="name" className="text-1xl ">
                 Name

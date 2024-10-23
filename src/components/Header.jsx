@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import navMenu from "../constants/navMenu";
-import { FaShopify } from "react-icons/fa";
-import { HOME_ROUTE } from "../constants/routes";
+
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../redux/auth/authSlice";
 import { BiLogOut } from "react-icons/bi";
@@ -18,7 +17,7 @@ const Header = () => {
   }
   return (
     <>
-      <nav className="bg-white dark:bg-gray-900 sticky max-w-screen-xl mx-auto px-4 top-0 start-0 border-b border-gray-200 dark:border-gray-600 z-20">
+      <nav className="bg-white sticky max-w-screen-xl mx-auto px-4 top-0 start-0 border-b  z-20">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-10 p-4">
           <IconHeader />
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

@@ -54,7 +54,8 @@ const LoginForm = () => {
     <>
       <form
         onSubmit={handleSubmit(submitForm)}
-        className="flex flex-col lg:flex-row h-auto mx-16 p-2 w-auto  mt-0 rounded-lg   justify-around "
+        p-4
+        className="flex flex-col lg:flex-row h-auto  flex-wrap items-center  mx-10 md:mx-16 lg:mx-16 p-2  max-w-screen-xl   rounded-lg   justify-around "
       >
         <div className="w-auto mt-16  ms-16 text-justify ">
           <h1 className="text-2xl font-bold text-teal-700 my-3">
