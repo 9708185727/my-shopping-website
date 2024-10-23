@@ -25,7 +25,7 @@ const SectC = ({ MenuData, selectedCategory }) => {
                 <img
                   src={menu.url}
                   alt="Error"
-                  className="h-24 rounded-full  w-24 mx-16 "
+                  className="h-24 rounded-full  w-auto mx-16 "
                 />
                 <p className="ms-3 my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
                   {menu.category}
@@ -47,10 +47,7 @@ const SectC = ({ MenuData, selectedCategory }) => {
                 <LuBus className="inline mr-2 text-zinc-900" />
                 Free Delivery
               </p>
-              <p className=" float-right p-1  text-black  mt-2 mr-2  ">
-                {menu.rating}
-                <IoIosStarOutline className="inline ms-1 mb-1 text-red-500" />
-              </p>{" "}
+           
               </div>
           );
         })}
