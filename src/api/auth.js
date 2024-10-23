@@ -7,10 +7,12 @@ const login = async ({email,password}) => {
   });
   return response;
 };
-const register = async ({name,email,password,confirmPassword}) => {
+const register = async ({name,address,phone,email,password,confirmPassword}) => {
   const response = await axios.post(`${config.baseApiUrl}/api/auth/register`,{
 
     name,
+    address,
+    phone,
     email,
     password,
     confirmPassword,

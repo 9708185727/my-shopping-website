@@ -32,7 +32,7 @@ const RegisterForm = () => {
     //    const {name,ref,onChange,onBlur}= register("email")
     function submitFormRegister(data) {
       dispatch(registerUser(data));
-      
+      console.log(data)
     }
     useEffect(() => {
       toast(error,{
@@ -77,7 +77,7 @@ const RegisterForm = () => {
             
             < PiPerson className="absolute top-2.5 left-2 text-black" />
             <input
-              type="name"
+              type="text"
               {...register("name", {
                 required: "Please enter full name",
               
@@ -91,7 +91,7 @@ const RegisterForm = () => {
             
             <CiLocationOn className="absolute top-2.5 left-2 text-black" />
             <input
-              type="address"
+              type="text"
               {...register("address", {
                 required: "Please enter full address",
               
@@ -105,12 +105,14 @@ const RegisterForm = () => {
             
             <MdContactPhone className="absolute top-2.5 left-2 text-black" />
             <input
-              type="phone"
+              type="number"
               {...register("phone", {
-                required: "Please enter full phone",
+                required: "Please enter phone number",
+                minLength:10,
+                
               
               })}
-              placeholder="Enter fulll phone"
+              placeholder="Enter valid phone number"
               className="p-1 pr-9 pl-8 text-black min-w-full rounded-full border border-2xl  border-black"
             />
             <p className="text-red-500 ms-2">{errors.phone?.message}</p>
