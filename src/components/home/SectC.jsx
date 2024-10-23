@@ -14,7 +14,7 @@ const SectC = ({MenuData,selectedCategory}) => {
       <div className="mx-16 p-2  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4  space-x-2 rounded-lg">
         {MenuData.map((menu) => {
           return (
-            <div key={menu._id} className="ms-2 my-3  shadow-lg max-w-auto max-h-auto rounded-lg">
+            <div key={menu._id} className="ms-2 my-3   shadow-lg max-w-auto max-h-auto rounded-lg ">
               <div  className=" h-36  text-center  rounded-lg ">
                 <div className="bg-green-500 w-8 h-8 float-right mr-4 mt-4 rounded-lg">
                   <FaHeart className=" text-red-600 mt-2 ml-2 " />
@@ -22,7 +22,7 @@ const SectC = ({MenuData,selectedCategory}) => {
                 <img
                   src={menu.url}
                   alt="Error"
-                  className="h-24 rounded-full  w-24 mx-16 "
+                  className="relative bg-teal-300 h-36  text-center p-2 rounded-lg "
                 />
               </div>
 

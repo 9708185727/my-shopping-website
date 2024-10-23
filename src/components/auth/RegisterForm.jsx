@@ -229,7 +229,7 @@ const RegisterForm = () => {
               <PiInstagramLogoLight className="ml-2 inline bg-white text-red-600 " />
             </div>
             <div className="text-1xl mt-5 text-black">
-              Don't have an account?
+              Already have an account?
               <Link to={LOGIN_ROUTE}>
                 <button
                   type="button"
