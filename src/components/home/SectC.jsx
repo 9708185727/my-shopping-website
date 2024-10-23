@@ -22,11 +22,11 @@ const SectC = ({MenuData,selectedCategory}) => {
                 <img
                   src={menu.url}
                   alt="Error"
-                  className="relative bg-teal-300 h-36  text-center p-2 rounded-lg "
+                  className="relative  h-36  text-center p-2 rounded-full "
                 />
               </div>
 
-              <h2 className="ml-2 my-2 text-xl font-semibold ">
+              <h2 className="ml-2 mt-4 text-xl font-semibold ">
                 {menu.category}
               </h2>
               <h3 className="ml-2 my-2 text-xl font-semibold ">{menu.name}</h3>
