@@ -34,8 +34,8 @@ const SectB = () => {
               </p>
             </div>
 
-            <h2 className="ms-2 my-2 text-xl font-semibold ">{menu.name}</h2>
-            <p className="my-4">
+            <h2 className="ms-3 my-2 text-xl font-semibold ">{menu.name}</h2>
+            <p className="my-4 ms-4">
               <span className="text-2xl font-serif ">
                 ${Math.floor(menu.price * 0.8)}
               </span>{" "}

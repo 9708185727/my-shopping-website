@@ -19,7 +19,7 @@ const SectC = ({ MenuData, selectedCategory }) => {
           return (
             <div
             key={menu._id}
-              className="ms-2 my-3   shadow-lg max-w-auto max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out"
+              className="ms-2 my-3   shadow-lg max-w-48 max-h-auto rounded-lg cursor-pointer hover:scale-105 hover:translate hover:duration-75 hover:ease-in-out"
             >
               <div className="relative bg-teal-300 h-36  text-center p-2 rounded-lg ">
                 <img
@@ -27,14 +27,14 @@ const SectC = ({ MenuData, selectedCategory }) => {
                   alt="Error"
                   className="h-24 rounded-full  w-24 mx-16 "
                 />
-                <p className="ms-2 my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
+                <p className="ms-3 my-2 p-1 absolute top-24 text-black rounded-full float-left mb-56 ">
                   {menu.category}
                   <IoIosStarOutline className="inline ms-1 mb-1 text-red-500" />
                 </p>
               </div>
   
-              <h2 className="ms-2 my-2 text-xl font-semibold ">{menu.name}</h2>
-              <p className="my-4">
+              <h2 className="ms-4 my-2 text-xl font-semibold ">{menu.name}</h2>
+              <p className="my-4 ms-2">
                 <span className="text-2xl font-serif ">
                   ${Math.floor(menu.price * 0.8)}
                 </span>{" "}
@@ -43,7 +43,7 @@ const SectC = ({ MenuData, selectedCategory }) => {
                 </span>
               </p>
         
-              <p className="text-slate-700 ml-1 my-2 p-1">
+              <p className="text-slate-700 ms-2 my-2 p-1">
                 <LuBus className="inline mr-2 text-zinc-900" />
                 Free Delivery
               </p>
