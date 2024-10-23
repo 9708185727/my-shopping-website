@@ -19,14 +19,11 @@ const SectC = ({MenuData,selectedCategory}) => {
                 <div className="bg-green-500 w-8 h-8 float-right mr-4 mt-4 rounded-lg">
                   <FaHeart className=" text-red-600 mt-2 ml-2 " />
                 </div>
-                <div className="relative bg-teal-300 h-36  text-center p-2 rounded-lg ">
-              <img
-                src={menu.url}
-                alt="Error"
-                className="h-24 rounded-full  w-24 mx-16 "
-              />
-             
-            </div>
+                <img
+                  src={menu.url}
+                  alt="Error"
+                  className="relative min-h-24 min-w-24  text-center p-2 rounded-full "
+                />
               </div>
 
               <h2 className="ml-2 mt-4 text-xl font-semibold ">

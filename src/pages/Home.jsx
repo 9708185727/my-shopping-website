@@ -55,7 +55,7 @@ const Home = () => {
           <Link to={PRODUCTS_ROUTE}>
             {" "}
             <p className="inline text-black text-md absolute top-2 right-14 mx-14">
-              See More <FaLongArrowAltRight className="text-green-500  block md:inline lg:inline" />
+              See More <FaLongArrowAltRight className="text-green-500 sm:mt-5 inline" />
             </p>
           </Link>
         </div>
