@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer'
 import LoginForm from '../../components/auth/LoginForm'
 const Login = () => {
   return (
@@ -7,6 +8,7 @@ const Login = () => {
       <section>
 
         <LoginForm/>
+        <Footer/>
       </section>
     </>
   )
