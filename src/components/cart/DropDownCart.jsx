@@ -10,7 +10,7 @@ const DropDownCart = ({ showcart, setShowCart }) => {
   return (
     <>
       <div className={`${showcart ? "block" : "hidden"} relative `}>
-        <div className=" bg-slate-200 w-96 p-4 absolute  -left-64 top-24 md:-top-6 lg:-top-6 md:left=48 lg:left-48  z-50 rounded-md shadow-lg">
+        <div className=" bg-slate-200 opacity-80 min-w-96 p-4 absolute -left-64 top-60 md:-top-6 lg:-top-6 md:left=48 lg:left-48  z-50 rounded-md shadow-lg">
           <div className="flex justify-between">
             {" "}
             <h1 className="text-center mb-4 text-2xl text-teal-500 ">

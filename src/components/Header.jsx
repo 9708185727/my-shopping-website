@@ -23,9 +23,9 @@ const Header = () => {
       <nav className="bg-white sticky max-w-screen-xl mx-auto px-4 top-0 start-0 border-b  z-20">
         <div className="max-w-screen-xl flex flex-wrap  justify-between mx-10 p-4">
           <IconHeader />
-          {isAuthenticated?    <div>
+          {isAuthenticated?<div className="ml-0">
                <button onClick={()=>setShowCart(!showcart)}>
-                    <FaCartShopping className="ms-2 text-xl text-green-400 "/>
+                    <FaCartShopping className=" mt-3 text-xl text-teal-400 "/>
                   
                   </button>
                   <DropDownCart showcart={showcart} setShowCart={setShowCart}/>
