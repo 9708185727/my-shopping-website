@@ -8,10 +8,13 @@ import { PRODUCTS_ROUTE } from "../../constants/routes";
 import { getProductId } from "../../api/products";
 import { useParams } from "react-router";
 import Spinner from "../../components/products/Spinner";
+import { AddProductToCart } from "../../redux/cart/cartSlice";
+import { useDispatch } from "react-redux";
 const ProductDetails = () => {
   const params=useParams()
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState([])
+  const dispatch=useDispatch()
   useEffect(() => {
    
     getProductId(params.id)
@@ -23,6 +26,9 @@ const ProductDetails = () => {
         console.log(error.response.data)
       });
   }, [params.id]);
+  function addToCart() {
+    dispatch(AddProductToCart(product));
+  }
   if(loading) return (<div className="text-center w-full  mt-2">  <Spinner/></div>)
   return (
 
@@ -67,7 +73,7 @@ const ProductDetails = () => {
                     {product.price}
                   </span>
                 </p>
-                <button className=" block px-3 py-2 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white hover:bg-teal-500">
+                <button onClick={addToCart} className=" block px-3 py-2 mt-4 bg-teal-800 text-xl text-white-700 rounded text-white hover:bg-teal-500">
                   Add to Cart
                   <FaCartPlus className="inline ml-2" />
                 </button>

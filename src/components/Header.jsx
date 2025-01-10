@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import {  NavLink } from "react-router-dom";
 import navMenu from "../constants/navMenu";
-
+import DropDownCart from "./cart/DropDownCart";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../redux/auth/authSlice";
 import { BiLogOut } from "react-icons/bi";
 import IconHeader from "./IconHeader";
+import { FaCartShopping } from "react-icons/fa6";
 
 const Header = () => {
   const [isMobileMenuHidden, setMobileMenuHidden] = useState(true);
+  const [showcart,setShowCart]=useState(false)
   const { user } = useSelector((state) => state.auth);
   const isAuthenticated = user ? true : false;
+  
   const dispatch = useDispatch();
   function logout() {
     dispatch(logoutUser());
@@ -20,6 +23,13 @@ const Header = () => {
       <nav className="bg-white sticky max-w-screen-xl mx-auto px-4 top-0 start-0 border-b  z-20">
         <div className="max-w-screen-xl flex flex-wrap  justify-between mx-10 p-4">
           <IconHeader />
+          {isAuthenticated?    <div>
+               <button onClick={()=>setShowCart(!showcart)}>
+                    <FaCartShopping className="ms-2 text-xl text-green-400 "/>
+                  
+                  </button>
+                  <DropDownCart showcart={showcart} setShowCart={setShowCart}/>
+               </div>:null}
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             {user ? (
               <button
