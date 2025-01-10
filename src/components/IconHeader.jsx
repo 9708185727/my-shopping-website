@@ -13,14 +13,14 @@ const IconHeader = () => {
         <Link to={HOME_ROUTE}>
        
         
-            <FaShopify className="text-teal-500  h-8 w-8  inline mb-4 mr-2" />
+            <FaShopify className="text-teal-500 bg-white  h-8 w-8  inline mb-4 mr-2" />
 
-            <span className="self-center text-3xl font-semibold font-serif whitespace-nowrap dark:text-white">
+            <span className="self-center text-3xl font-semibold font-serif whitespace-nowrap dark:text-black">
               Shopfiy
             </span>
           </Link>
         
-          <span className="text-1xl font-semibold text-teal-400">Ghar</span>
+          <span className="text-1xl font-semibold text-teal-400 dark:text-black">Ghar</span>
         </NavLink>
     </>
   )
