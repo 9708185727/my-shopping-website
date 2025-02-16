@@ -1,27 +1,12 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
+import { useForm } from "react-hook-form";
+import { addContact } from "../api/contact";
+import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted: ", formData);
-    // Here, you would typically send the form data to a server
-    // via an API endpoint.
-  };
-
+ 
+ 
   return (
     <>
       <div className="  max-w-screen-xl max-h-screen  mx-2 md:mx-10 lg:mx-10 my-4 text-center h-auto  ">
@@ -37,54 +22,7 @@ const Contact = () => {
             we'll get back to you as soon as possible.
           </p>
 
-          <form className="text-center my-4 w-auto" onSubmit={handleSubmit}>
-            <div className="form-group my-4 ">
-              <label htmlFor="name" className="text-1xl ">
-                Name
-              </label>
-              <input
-                className="border border-black ms-2 rounded-sm"
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                className="border border-black ms-2 rounded-sm"
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group mt-5">
-              <label htmlFor="message">Message</label>
-              <textarea
-                className="border border-black ms-2 rounded-sm h-5"
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="px-4 my-3 py-1 bg-teal-500 rounded-md"
-            >
-              Submit
-            </button>
-          </form>
+        <ContactForm/>
         </div>
         <div className="w-auto mt-6">
           <iframe

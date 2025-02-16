@@ -7,6 +7,7 @@ const getProducts = async ({
   filters = {},
 }) => {
   const query = `limit=${limit}&sort=${sort}&filters=${JSON.stringify(filters)}`;
+  
   const response = await axios.get(
     `${config.baseApiUrl}/api/products?${query}`
   );

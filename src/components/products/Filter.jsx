@@ -47,7 +47,7 @@ const ProductsFilter = () => {
             type="text"
             id="category"
             className="ms-2 border border-black-lg border-md"
-          value={query?.filters?.category}
+            value={query?.filters?.category}
             onChange={(e) => {
               filterByCategory(e.target.value);
             }}
