@@ -11,6 +11,7 @@ import {
   LOGIN_ROUTE,
   REGISTER_ROUTE,
   PRODUCTS_ROUTE,
+  CART_ROUTE,
 } from "./constants/routes";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
@@ -26,15 +27,22 @@ import ProductDetails from "./pages/products/Details";
 import AuthLayout from "./layouts/AuthLayout";
 import UnAuthLayout from "./layouts/UnAuthLayout";
 import AddProduct from "./pages/products/Add";
+import ForgotPassword from "./pages/auth/ForgotPassword";
+import ResetPassword from "./pages/auth/ResetPassword";
+import CartProduct from "./components/cart/CartProduct";
+import DropDownCart from "./components/cart/DropDownCart";
 const Routes = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
         <Route element={<AuthLayout />}>
-        
+      
           <Route path={ABOUT_ROUTE} element={<About />} />
           <Route path={CONTACT_ROUTE} element={<Contact />} />
+          <Route path={CART_ROUTE} element={<DropDownCart />} />
 
           <Route path={PRODUCTS_ROUTE}>
             <Route index element={<ProductList />} />

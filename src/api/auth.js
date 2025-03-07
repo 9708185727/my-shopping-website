@@ -7,16 +7,23 @@ const login = async ({email,password}) => {
   });
   return response;
 };
-const register = async ({name,address,phone,email,password,confirmPassword}) => {
-  const response = await axios.post(`${config.baseApiUrl}/api/auth/register`,{
-
-    name,
-    address,
-    phone,
-    email,
-    password,
-    confirmPassword,
-  });
+// {name,address,phone,email,image,password,confirmPassword}
+const register = async (formData) => {
+  const response = await axios.post(`${config.baseApiUrl}/api/auth/register`,formData,
+  {
+    headers:{ "Content-Type": "multipart/form-data" }
+  }
+  );
   return response;
 };
-export {login,register}
+const forgotpassword = async ({email}) => {
+ 
+  const response = await axios.post(`${config.baseApiUrl}/api/auth/forgot-password`,{email});
+  return response;
+};
+const resetPassword = async ({token,password}) => {
+ 
+  const response = await axios.post(`${config.baseApiUrl}/api/auth/reset-password`,{token,password});
+  return response;
+};
+export {login,register,forgotpassword,resetPassword}

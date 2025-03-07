@@ -8,7 +8,7 @@ import { PRODUCTS_ROUTE } from "../../constants/routes";
 import { getProductId } from "../../api/products";
 import { useParams } from "react-router";
 import Spinner from "../../components/products/Spinner";
-import { AddProductToCart } from "../../redux/cart/cartSlice";
+import { addProductToCart } from "../../redux/cart/cartSlice";
 import { useDispatch } from "react-redux";
 const ProductDetails = () => {
   const params=useParams()
@@ -26,8 +26,12 @@ const ProductDetails = () => {
         console.log(error.response.data)
       });
   }, [params.id]);
+
   function addToCart() {
-    dispatch(AddProductToCart(product));
+    
+    dispatch(addProductToCart(product));
+    
+
   }
   if(loading) return (<div className="text-center w-full  mt-2">  <Spinner/></div>)
   return (

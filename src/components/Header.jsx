@@ -6,18 +6,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../redux/auth/authSlice";
 import { BiLogOut } from "react-icons/bi";
 import IconHeader from "./IconHeader";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping, FaPerson } from "react-icons/fa6";
+import UploadImage from "../pages/auth/UploadImage";
+import Users from "../pages/auth/UploadImage";
 
 const Header = () => {
   const [isMobileMenuHidden, setMobileMenuHidden] = useState(true);
+  const [isProfile, setProfile] = useState(true);
   const [showcart,setShowCart]=useState(false)
   const { user } = useSelector((state) => state.auth);
   const isAuthenticated = user ? true : false;
   
-  const dispatch = useDispatch();
-  function logout() {
-    dispatch(logoutUser());
-  }
+ 
   return (
     <>
       <nav className="bg-white sticky max-w-screen-xl mx-auto px-4 top-0 start-0 border-b  z-20">
@@ -31,16 +31,22 @@ const Header = () => {
                   <DropDownCart showcart={showcart} setShowCart={setShowCart}/>
                </div>:null}
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+         
+         
             {user ? (
-              <button
-                type="button"
-                onClick={logout}
-                className="text-teal-700  text-2xl focus:ring-4 focus:outline-none focus:ring-teal-700 font-medium rounded-lg  px-2 py-2 text-center "
-              >
-                Logout
-                <BiLogOut className="inline ml-2" />
-              </button>
+              
+                <div className="relative">
+                  <button onClick={()=>setProfile(!isProfile)}> <FaPerson className={`bg-teal-500 rounded-full w-8 h-8 mr-2 mt-2 ${isProfile?"":"hidden"}`}/>
+           
+            
+            
+           </button>
+            <div className="absolute top-2 right-1">
+            <Users isProfile={isProfile} setProfile={setProfile} />
+            </div>
+                </div>
             ) : null}
+               
             <button
               onClick={() => setMobileMenuHidden(!isMobileMenuHidden)}
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"

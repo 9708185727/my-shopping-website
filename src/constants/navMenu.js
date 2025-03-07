@@ -1,11 +1,10 @@
-import {HOME_ROUTE,ABOUT_ROUTE,CONTACT_ROUTE,LOGIN_ROUTE,REGISTER_ROUTE,PRODUCTS_ROUTE}   from "./routes"
+import {HOME_ROUTE,ABOUT_ROUTE,CONTACT_ROUTE,LOGIN_ROUTE,REGISTER_ROUTE,PRODUCTS_ROUTE, CART_ROUTE}   from "./routes"
 
 const navMenu=[
     {
         auth:true,
        route:HOME_ROUTE,
         label:"Home",
-
 
     },
     , {auth:true,
@@ -21,6 +20,12 @@ const navMenu=[
     {auth:true,
         route:CONTACT_ROUTE,
         label:"Contact",
+    
+
+    },
+    {auth:true,
+        route:CART_ROUTE,
+        label:"Cart",
     
 
     },

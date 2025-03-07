@@ -1,12 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { login, register } from "../../api/auth";
+import { forgotpassword, login, register } from "../../api/auth";
 const loginUser = createAsyncThunk(
   "auth/login",
   async (data, { rejectWithValue }) => {
     try {
       const response = await login(data);
-
-      localStorage.setItem("authToken", response.data?.token);
+      localStorage.setItem("authToken",response.data?.token);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data);
@@ -15,13 +14,21 @@ const loginUser = createAsyncThunk(
 );
 const registerUser = createAsyncThunk(
   "auth/register",
-  async (data, { rejectWithValue }) => {
+  async (formData,{rejectWithValue}) => {
     try {
-      const response = await register(data);
+      const response = await register(formData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data);
     }
   }
 );
-export { loginUser, registerUser };
+const forgotUserPassword=createAsyncThunk("/forgot-password",async (data,{rejectWithValue})=>{
+try {
+  const response= await forgotpassword(data)
+  return response.data;
+} catch (error) {
+  return rejectWithValue(error.response?.data);
+}
+})
+export { loginUser, registerUser,forgotUserPassword };

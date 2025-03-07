@@ -13,9 +13,8 @@ const authSlice = createSlice({
       localStorage.removeItem("authToken")
     }
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase(loginUser.pending, (state) => {
+  extraReducers: (builder) =>{
+    builder.addCase(loginUser.pending, (state) => {
         state.loading = true;
         state.error=null;
       })

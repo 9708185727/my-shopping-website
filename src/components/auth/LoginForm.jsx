@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoEyeOffSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { FaEye, FaFacebook } from "react-icons/fa6";
 import { PiInstagramLogoLight } from "react-icons/pi";
@@ -16,7 +16,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Spinner from "../products/Spinner";
 import { toast } from "react-toastify";
 import IconHeader from "../IconHeader";
-
 const LoginForm = () => {
   const [showpassword, setShowPassword] = useState(false);
 
@@ -130,9 +129,11 @@ const LoginForm = () => {
                 name="myCheckbox"
               />
               <p className="text-black inline "> Remember me</p>
-              <button className="text-red-500 ml-3 inline hover:text-red-900 ">
+             <NavLink to="/forgot-password">
+             <button className="text-red-500 ml-3 inline hover:text-red-900 ">
                 Forgot Password
               </button>
+             </NavLink>
             </div>
           </div>
           <button

@@ -6,10 +6,12 @@ import { useSelector } from "react-redux";
 import { MdCancel } from "react-icons/md";
 
 const DropDownCart = ({ showcart, setShowCart }) => {
-  const { products } = useSelector((state) => state.cart);
+  const { products,totalAmount} = useSelector((state) => state.cart);
   return (
     <>
+  
       <div className={`${showcart ? "block" : "hidden"} relative `}>
+        
         <div className=" bg-slate-200 opacity-80 min-w-96 p-4 absolute -left-64 top-60 md:-top-6 lg:-top-6 md:left=48 lg:left-48  z-50 rounded-md shadow-lg">
           <div className="flex justify-between">
             {" "}
@@ -23,18 +25,19 @@ const DropDownCart = ({ showcart, setShowCart }) => {
               <MdCancel />
             </button>
           </div>
-          {products.length === 0 ? (
+          {products?.length === 0 ? (
             <div className="text-center text-gray-800">
               <h2 className="text-lg text-red-300 font-semibold">
                 Cart is Empty !
               </h2>
             </div>
           ) : (
-            products.map((item) => {
+            products?.map((item) => {
               return <CartProduct key={item._id} id={item._id} {...item} />;
             })
           )}
         </div>
+        <h1>{totalAmount}</h1>
       </div>
     </>
   );
