@@ -23,18 +23,19 @@ function logout() {
 //   }, []);
 // console.log(user)
   return (
-//     user.image.replace('./uploads/', ''): This removes the ./uploads/ part of the image path, so you’re left with just the filename (e.g., 1741257605113-download.jpeg).
-// The final image URL becomes http://localhost:5000/uploads/1741257605113-download.jpeg.
+
     <div className={`${isProfile?"hidden":null} bg-slate-400 bg-opacity-80 space-y-1 relative border px-2 py-2 w-36 rounded-lg shadow-lg cursor-pointer flex items-center justify-center flex-col` }>
    <button onClick={()=>setProfile(!isProfile)}> <GiSplitCross className="absolute top-3 right-2" /></button>
 
-   {/* { users.map((user) => (
+    {/* { users.map((user) => (
         <div key={user.id}> 
         <img src={`http://localhost:5000/uploads/${user.image.replace('./uploads/', '')}`} alt={user.name} width="100" />
         </div>
-      // ))} */}
+      // ))} 
+   //     user.image.replace('./uploads/', ''): This removes the ./uploads/ part of the image path, so you’re left with just the filename (e.g., 1741257605113-download.jpeg).
+   // The final image URL becomes http://localhost:5000/uploads/1741257605113-download.jpeg. */}
+       <img src={`${config.baseApiUrl}/uploads/${user?._doc?.image.replace('./uploads/', '')}`} className="w-10 h-10 rounded-full" alt={user.name} width="100" />
    
-       <img src={`${config.baseApiUrl}/uploads/${user?._doc.image.replace('./uploads/', '')}`} className="w-10 h-10 rounded-full" alt={user.name} width="100" />
        <h1 className=" text-teal-600 text-md">{user?._doc.name}</h1> 
                 <button
                 type="button"
@@ -44,6 +45,7 @@ function logout() {
                 Logout
                 <BiLogOut className="inline ml-2" />
               </button>
+              <img src={user._doc.image} alt="" />
     </div>
   );
 };

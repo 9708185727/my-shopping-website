@@ -37,7 +37,6 @@ const [data,setData]=useState([])
      try {
       const formData = new FormData();
       formData.append('name',data.name);
-    
       formData.append('address', data.address);
       formData.append('phone', data.phone);
       formData.append('email', data.email);
@@ -69,7 +68,7 @@ const [data,setData]=useState([])
         autoClose:1500,
       });
     }, [error]);
-    console.log(data)
+    // console.log(data)
   return (
     <>
       <form
@@ -136,8 +135,9 @@ const [data,setData]=useState([])
            <input
             type="file"
             className="ml-3"
-            {...register("image", { required: "Image is required" })}
+            {...register("image")}
           />
+             {/* <p className="text-red-500 ms-2">{errors.image?.message}</p> */}
           </div>
           <div className="mt-5 relative">
             

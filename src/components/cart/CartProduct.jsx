@@ -5,7 +5,7 @@ import { decreaseQuantity, increaseQuantity, removeProductFromCart } from "../..
 
 const CartProduct = ({ id, name, category, quantity = 1 }) => {
   const dispatch = useDispatch();
-
+  
   return (
     <div className="space-y-4 p-2 my-2 w-full">
       <div className="bg-white flex justify-between items-center p-4 shadow-md rounded-lg">
