@@ -3,7 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { decreaseQuantity, increaseQuantity, removeProductFromCart } from "../../redux/cart/cartSlice";
 
-const CartProduct = ({ id, name, category, quantity = 1 }) => {
+const CartProduct = ({ id, name, category,price,url, quantity = 1 }) => {
   const dispatch = useDispatch();
   
   return (
@@ -14,7 +14,8 @@ const CartProduct = ({ id, name, category, quantity = 1 }) => {
           <h2 className="sn:text-lg sm:text-md md:font-semibold md:text-lg lg:font-semibold">{name}</h2>
           <span className="text-sm text-gray-500">{category}</span>
         </div>
-
+        <img src={url} alt="" className="max-w-8 max-h-8"/>
+<p>{price}</p>
         {/* Quantity Control */}
         <div className="flex items-center space-x-2">
           <button 

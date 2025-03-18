@@ -45,12 +45,19 @@ const cartSlice = createSlice({
     removeProductFromCart: (state, action) => {
       const productId = action.payload;
       const productToRemove = state.products.find((item) => item._id === productId);
-
+    
       if (productToRemove) {
         state.totalAmount -= productToRemove.price * productToRemove.quantity;
         state.products = state.products.filter((item) => item._id !== productId);
       }
+    
+      // If cart is empty, reset total amount to zero
+      if (state.products.length === 0) {
+        state.totalAmount = 0;
+      }
     },
+    
+    
   },
 });
 

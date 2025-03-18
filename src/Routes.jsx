@@ -31,6 +31,9 @@ import ForgotPassword from "./pages/auth/ForgotPassword";
 import ResetPassword from "./pages/auth/ResetPassword";
 import CartProduct from "./components/cart/CartProduct";
 import DropDownCart from "./components/cart/DropDownCart";
+import Payment from "./components/payment/Payment";
+import Success from "./components/payment/Success";
+import Failure from "./components/payment/Failure";
 const Routes = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -38,11 +41,15 @@ const Routes = () => {
           <Route index element={<Home />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          
         <Route element={<AuthLayout />}>
       
           <Route path={ABOUT_ROUTE} element={<About />} />
           <Route path={CONTACT_ROUTE} element={<Contact />} />
           <Route path={CART_ROUTE} element={<DropDownCart />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/failure" element={<Failure />} />
 
           <Route path={PRODUCTS_ROUTE}>
             <Route index element={<ProductList />} />
