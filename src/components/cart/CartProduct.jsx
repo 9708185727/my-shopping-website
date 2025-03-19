@@ -20,6 +20,7 @@ const CartProduct = ({ id, name, category,price,url, quantity = 1 }) => {
         <div className="flex items-center space-x-2">
           <button 
             onClick={() => dispatch(decreaseQuantity(id))} 
+            disabled={quantity===1}
             className="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300"
           >
             -

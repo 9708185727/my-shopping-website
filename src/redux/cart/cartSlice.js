@@ -37,9 +37,7 @@ const cartSlice = createSlice({
       if (existingProduct && existingProduct.quantity > 1) {
         existingProduct.quantity -= 1;
         state.totalAmount -= existingProduct.price; // ✅ Decrease total amount correctly
-      } else {
-        state.products = state.products.filter((item) => item._id !== productId);
-      }
+      } 
     },
 
     removeProductFromCart: (state, action) => {
